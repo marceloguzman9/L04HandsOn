@@ -14,46 +14,60 @@ class Employee {
       console.log(this.hireDate);
     }
   }
+
 class Manager extends Employee {
-  constructor(jobDescription, yearsExperience, degreeCompleted, name, salary, hireDate ) {
-     super (name, salary, hireDate);
-     this.jobDescription = jobDescription;
-     this.yearsExperience = yearsExperience;
-     this.degreeCompleted = degreeCompleted;
+  constructor(jobDescription, yearsExperience, degreeCompleted, name, salary, hireDate, managedEmps, xActivities ) {
+    super (name, salary, hireDate);
+    this.jobDescription = jobDescription;
+    this.yearsExperience = yearsExperience;
+    this.degreeCompleted = degreeCompleted;
+    this.managedEmps= managedEmps;
+    this.xActivities= xActivities;
+  }
+  getJobDescription() {
+    console.log(this.jobDescription);
+  }
+  getManagedEmps() {
+    console.log(this.managedEmps);
+  }
+  getxActivities() {
+    console.log(this.xActivities);
+  }
 
- 
-     
-
-
-     
-
-                
-
-                }
-
+  
 }
-// constructor (constructer is (jobDescription, yearsExperience, degreeCompleted, name, salary, hireDate))
-  // class Person {
-  //constructor(firstName, lastName) {
-    //this.firstName = firstName;
-    //this.lastName = lastName;
-  //}
+  
+ class Designer extends Employee {
+  constructor(jobDescription, yearsExperience, degreeCompleted, name, salary, hireDate ) {
+    super (name, salary, hireDate);
+    this.jobDescription = jobDescription;
+    this.yearsExperience = yearsExperience;
+    this.degreeCompleted = degreeCompleted;
+  }
+}
+  
+  class SalesAssociate extends Employee {
+    constructor(jobDescription, yearsExperience, degreeCompleted, name, salary, hireDate ) {
+      super (name, salary, hireDate);
+      this.jobDescription = jobDescription;
+      this.yearsExperience = yearsExperience;
+      this.degreeCompleted = degreeCompleted;
+    }
+}   
 
-  //greeting() {
-  //  console.log("Hello, my name is " + this.firstName + ".");
- // }
-//}
+let shiftMgr = new Manager(
+    "Manages people"
+    , "4 years"
+    , "yes"
+    , "DJ Brooks"
+    , "$50,00"
+    , "1/1/2018"
+    , "9"
+    , "Mentor/Teacher on JavaScript"
+);
 
-//class NewStudent extends Person {
-  //constructor(studentID, firstName, lastName) {
-    //super(firstName, lastName);
-    //this.studentID = studentID;
-  //}
-  //studentInfo() {
-    //console.log(this.studentID + " " + this.firstName + ", " + this.lastName);
-  //}
-//}
-
-//let student = new NewStudent(12, "John", "Smith");
-//student.greeting();
-//student.studentInfo();
+shiftMgr.getJobDescription();
+shiftMgr.getHireDate();
+shiftMgr.getName();
+shiftMgr.getManagedEmps();
+shiftMgr.getxActivities();
