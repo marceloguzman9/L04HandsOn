@@ -66,7 +66,15 @@ class SalesAssociate extends Employee {
     this.yearsExperience = yearsExperience;
     this.degreeCompleted = degreeCompleted;
     }
-}   
-
-
-
+    getJobDescription() {
+      console.log(this.jobDescription);
+  }   
+  getHireDate() {
+    console.log(this.Date);
+  }
+}
+  let oldSals= new SalesAssociate("Sells Lamborgini's", "5 years", "none", "Gustavo Stallone", "$100k", "3/16/2018");
+  oldSals.getName();
+  oldSals.getJobDescription();
+  oldSals.getSalary();
+  
